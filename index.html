@@ -32,32 +32,6 @@
 	<button id="btn2">b</button>
 </div>
 
-<footer>
-	<dl>
-		<dt>코스피</dt>
-		<dd>1.234</dd>
-		<dd>^ 12.3</dd>
-		<dd>1.23%</dd>
-	</dl>
-	<dl>
-		<dt>코스닥</dt>
-		<dd>1.234</dd>
-		<dd>^ 12.3</dd>
-		<dd>1.23%</dd>
-	</dl>
-	<dl>
-		<dt>뉴스</dt>
-		<dd data-news-idx="0"><a href="">새로운 뉴스가 등록됩니다.11</a></dd>
-		<dd data-news-idx="1"><a href="">새로운 뉴스가 등록됩니다.22</a></dd>
-		<dd data-news-idx="2"><a href="">새로운 뉴스가 등록됩니다.33</a></dd>
-	</dl>
-	<ul>
-		<li><img src="img/btn_che.png" alt="체"></li>
-		<li><img src="img/btn_si.png" alt="신"></li>
-		<li><img src="img/btn_setting.png" alt="설정"></li>
-	</ul>
-</footer>
-<!--script type="text/javascript" src="js/firebug-lite.js"></script-->
 <script type="text/javascript" src="js/mdi.js"></script>
 <script type="text/javascript">
 window.addEventListener("load", initPage, false);
@@ -76,15 +50,15 @@ function bindMenu(){
 	
 	//주식 > 시세
 	mdi.navigator = {};
-	mdi.navigator.title = "시세";
-	mdi.navigator.url = "content0.html";
+	mdi.navigator.title = "New";
+	mdi.navigator.url = "html/content0.html";
 	mdi.navigator.width = "500";
 	mdi.navigator.height = "300";
 	mdi.stock.push(mdi.navigator);
 	
 	//주식 > 투자정보
 	mdi.navigator = {};
-	mdi.navigator.title = "투자정보";
+	mdi.navigator.title = "Open";
 	mdi.navigator.url = "content0.html";
 	mdi.navigator.width = "500";
 	mdi.navigator.height = "300";
@@ -92,7 +66,7 @@ function bindMenu(){
 	
 	//주식 > 주문
 	mdi.navigator = {};
-	mdi.navigator.title = "주문";
+	mdi.navigator.title = "Save";
 	mdi.navigator.url = "content0.html";
 	mdi.navigator.width = "500";
 	mdi.navigator.height = "300";
@@ -100,7 +74,7 @@ function bindMenu(){
 	
 	//주식 > 계좌
 	mdi.navigator = {};
-	mdi.navigator.title = "계좌";
+	mdi.navigator.title = "Save As";
 	mdi.navigator.url = "content0.html";
 	mdi.navigator.width = "500";
 	mdi.navigator.height = "300";
@@ -189,7 +163,7 @@ function bindEvent(){
 var btn1 = document.querySelector("#btn1");
 var btn2 = document.querySelector("#btn2");
 btn1.addEventListener("click", function(){
-	mdi.createWindow("content0.html", "[2000]주식종합", 1000, 600);
+	mdi.createWindow("content0.html", "(new chart)", 480, 360);
 	//mdi.tween(btn2, {left:100, onFinish:"a"})
 }, false);
 btn2.addEventListener("click", function(){
